@@ -302,7 +302,8 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_designation_list (){
-                    return Object.keys(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["type"]].designations).toString();
+                    return wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["type"]].designations.toString();
+                    // Object.keys(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["type"]].designations).toString();
                 }
 
                 function fn_1026_band_industry_list (){
