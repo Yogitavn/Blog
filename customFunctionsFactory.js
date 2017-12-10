@@ -26,7 +26,7 @@ angular.module('wowjsons')
               }
             },
             "industry": {
-              "It": {
+              "IT": {
                 "band_level": {
                   "band_O_level_1": {
                     "gmc_premium": 14000,
@@ -105,11 +105,89 @@ angular.module('wowjsons')
                   }
                 },
                 "designations": [
-                  "D1",
-                  "D2",
-                  "D3",
-                  "D4",
-                  "D5"
+                    "Associate Engineer, Technical Associate, Sr. Technical Associate, Technical Lead, Project Lead, Technical Specialist, Project Manager, Architect, Group Manager, Sr. Architect, Delivery Manager, Principal Architect, Sr Delivery Manager, Sr. Principal Architect, Asst Director, Director.  Sr. Director, AVP, Divisional VP, Sr. Divisional VP, Analyst, Business Analyst, Sr. Business Analyst, Consultant, Sr. Consultant, Lead Consultant, Principal Consultant, Sr.Principal Consultant, Principal Advisor, Sr.Principal Advisor,  Associate Executive, Executive, Sr. Executive, Asst. Manager, Dy. Manager, Manager, Team Manager, Sr. Manager, General Manager"
+                ]
+              },
+              "BPM": {
+                "band_level": {
+                  "band_O_level_1": {
+                    "gmc_premium": 14000,
+                    "gpa_premium": 1250,
+                    "pvb": 45000
+                  },
+                  "band_O_level_2": {
+                    "gmc_premium": 14000,
+                    "gpa_premium": 1250,
+                    "pvb": 55000
+                  },
+                  "band_O_level_3": {
+                    "gmc_premium": 14000,
+                    "gpa_premium": 1250,
+                    "pvb": 65000
+                  },
+                  "band_P_level_1": {
+                    "gmc_premium": 20000,
+                    "gpa_premium": 1750,
+                    "pvb": 125000
+                  },
+                  "band_P_level_2": {
+                    "gmc_premium": 20000,
+                    "gpa_premium": 1750,
+                    "pvb": 175000
+                  },
+                  "band_P_level_3": {
+                    "gmc_premium": 20000,
+                    "gpa_premium": 1750,
+                    "pvb": 225000
+                  },
+                  "band_Q_level_1": {
+                    "gmc_premium": 30000,
+                    "gpa_premium": 3000,
+                    "pvb": 350000
+                  },
+                  "band_Q_level_2": {
+                    "gmc_premium": 30000,
+                    "gpa_premium": 3000,
+                    "pvb": 400000
+                  },
+                  "band_Q_level_3": {
+                    "gmc_premium": 30000,
+                    "gpa_premium": 3000,
+                    "pvb": 450000
+                  },
+                  "band_R_level_1": {
+                    "gmc_premium": 46000,
+                    "gpa_premium": 4000,
+                    "pvb": 650000
+                  },
+                  "band_R_level_2": {
+                    "gmc_premium": 46000,
+                    "gpa_premium": 4000,
+                    "pvb": 750000
+                  },
+                  "band_R_level_3": {
+                    "gmc_premium": 46000,
+                    "gpa_premium": 4000,
+                    "pvb": 850000
+                  },
+                  "band_S_level_1": {
+                    "gmc_premium": 60000,
+                    "gpa_premium": 5000,
+                    "pvb": 1200000
+                  },
+                  "band_S_level_2": {
+                    "gmc_premium": 60000,
+                    "gpa_premium": 5000,
+                    "pvb": 1500000
+                  },
+                  "band_S_level_3": {
+                    "gmc_premium": 60000,
+                    "gpa_premium": 5000,
+                    "pvb": 1800000
+                  }
+                },
+                "designations": [
+                    "Jr Advisor, Advisor, Sr Advisor, Subject Matter Expert, Team Leader, Sr Team Leader\nAssistant Manager,Deputy Manager,Operations Manager,Group Manager,Delivery Manager,Sr. Delivery Manager,Associate Director,Director,Sr. Director,Analyst, Business Analyst, Sr. Business Analyst"
                 ]
               }
             },
