@@ -104,7 +104,7 @@ angular.module('wowjsons')
                     "pvb": 1800000
                   }
                 },
-                "Designations": [
+                "designations": [
                   "D1",
                   "D2",
                   "D3",
@@ -135,7 +135,6 @@ angular.module('wowjsons')
 
                 function fn_1026_retention_bonus (){
                     return parseFloat(wowCustomFunctionsFactory.data[1026].industry['It'].band_level["Band O Level 1"]["pvb"]);
-                    // wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["industry"]].band_level[inputVars.customFieldsMap["band_level"]]["pvb"];
                 }
 
                 function fn_1026_pvb (){
@@ -222,6 +221,10 @@ angular.module('wowjsons')
                     
                 function fn_1026_band_level_list (){
                     return Object.keys(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["type"]].band_level).toString();
+                }
+
+                function fn_1026_designation_list (){
+                    return Object.keys(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["type"]].designations).toString();
                 }
 
                 function fn_1026_band_industry_list (){
