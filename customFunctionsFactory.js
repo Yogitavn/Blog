@@ -374,7 +374,7 @@ angular.module('wowjsons')
                                 inWords[j] = inWords[j] + ' Only';
                                 break;
                             case 1:
-                                tensComplication();
+                                tens_complication();
                                 break;
                             case 2:
                                 if (actnumber[i] === '0') {
@@ -396,7 +396,7 @@ angular.module('wowjsons')
                                 }
                                 break;
                             case 4:
-                                tensComplication();
+                                tens_complication();
                                 break;
                             case 5:
                                 if (actnumber[i] === '0' || actnumber[i + 1] === '1') {
@@ -409,7 +409,7 @@ angular.module('wowjsons')
                                 }
                                 break;
                             case 6:
-                                tensComplication();
+                                tens_complication();
                                 break;
                             case 7:
                                 if (actnumber[i] === '0' || actnumber[i + 1] === '1') {
@@ -420,7 +420,7 @@ angular.module('wowjsons')
                                 inWords[j] = inWords[j] + ' Crore';
                                 break;
                             case 8:
-                                tensComplication();
+                                tens_complication();
                                 break;
                             default:
                                 break;
