@@ -228,7 +228,7 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_transport_allowance (){
-                    if(inputVars.customFieldsMap["annual_compensation"] > 0){
+                    if(inputVars["ctcOffered"] > 0){
                         return wowCustomFunctionsFactory.data[1026].transport_allowance;
                     }else{
                         return 0;
@@ -236,7 +236,7 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_medical (){
-                    if(inputVars.customFieldsMap["annual_compensation"] > 0){
+                    if(inputVars["ctcOffered"] > 0){
                         return wowCustomFunctionsFactory.data[1026].medical;
                     }else{
                         return 0;
@@ -244,7 +244,7 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_basic (){
-                    if(inputVars.customFieldsMap["annual_compensation"] < 1000000){
+                    if(inputVars["ctcOffered"] < 1000000){
                         return inputVars.customFieldsMap["fixed_component"] * 0.16;
                     }else{
                         return inputVars.customFieldsMap["fixed_component"] * 0.35;
@@ -260,8 +260,8 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_pda (){
-                    if(inputVars.customFieldsMap["annual_compensation"] > 0){
-                        return inputVars.customFieldsMap["annual_compensation"] - 
+                    if(inputVars["ctcOffered"] > 0){
+                        return inputVars["ctcOffered"] - 
                         (
                             inputVars.customFieldsMap["basic"] +
                             inputVars.customFieldsMap["hra"] + 
@@ -279,7 +279,7 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_get_string_annual_compensation (){
-                    return get_string_number(inputVars.customFieldsMap["annual_compensation"])
+                    return get_string_number(inputVars["ctcOffered"])
                     //  Object.keys(wowCustomFunctionsFactory.data[1026].industry).toString();
                 }
 
