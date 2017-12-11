@@ -284,7 +284,7 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_get_string_annual_compensation (){
-                    return get_string_number(inputVars["ctcOffered"])
+                    return inputVars["ctcOffered"];
                     //  Object.keys(wowCustomFunctionsFactory.data[1026].industry).toString();
                 }
 
