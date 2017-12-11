@@ -278,7 +278,7 @@ angular.module('wowjsons')
                     }
                 }
 
-                function fn_1026_get_string_annual_compensation (){
+                function fn_1026_get_annual_compensation (){
                     return get_string_number(inputVars.customFieldsMap["annual_compensation"])
                     //  Object.keys(wowCustomFunctionsFactory.data[1026].industry).toString();
                 }
