@@ -228,7 +228,7 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_transport_allowance (){
-                    if(inputVars["ctcOffered"] > 0){
+                    if(inputVars.customFieldsMap["annual_compensation"] > 0){
                         return wowCustomFunctionsFactory.data[1026].transport_allowance;
                     }else{
                         return 0;
@@ -236,7 +236,7 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_medical (){
-                    if(inputVars["ctcOffered"] > 0){
+                    if(inputVars.customFieldsMap["annual_compensation"] > 0){
                         return wowCustomFunctionsFactory.data[1026].medical;
                     }else{
                         return 0;
@@ -244,7 +244,7 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_basic (){
-                    if(inputVars["ctcOffered"] < 1000000){
+                    if(inputVars.customFieldsMap["annual_compensation"] < 1000000){
                         return inputVars.customFieldsMap["fixed_component"] * 0.16;
                     }else{
                         return inputVars.customFieldsMap["fixed_component"] * 0.35;
@@ -260,8 +260,8 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_pda (){
-                    if(inputVars["ctcOffered"] > 0){
-                        return inputVars["ctcOffered"] - 
+                    if(inputVars.customFieldsMap["annual_compensation"] > 0){
+                        return inputVars.customFieldsMap["annual_compensation"] - 
                         (
                             inputVars.customFieldsMap["basic"] +
                             inputVars.customFieldsMap["hra"] + 
@@ -279,25 +279,30 @@ angular.module('wowjsons')
                 }
 
                 function fn_1026_get_string_annual_compensation (){
+                    return get_string_number(inputVars.customFieldsMap["annual_compensation"])
+                    //  Object.keys(wowCustomFunctionsFactory.data[1026].industry).toString();
+                }
+
+                function fn_1026_get_string_annual_compensation (){
                     return get_string_number(inputVars["ctcOffered"])
                     //  Object.keys(wowCustomFunctionsFactory.data[1026].industry).toString();
                 }
 
             //*************** address *****************
                 function fn_1026_c_address (){
-                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["VAR_REQUISITION_LOCATION"]]["Address"];
+                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["location"]]["Address"];
                 }
 
                 function fn_1026_c_contact_person (){
-                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["VAR_REQUISITION_LOCATION"]]["Name"];
+                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["location"]]["Name"];
                 }
 
                 function fn_1026_c_contact_no (){
-                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["VAR_REQUISITION_LOCATION"]]["Contact"];
+                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["location"]]["Contact"];
                 }
 
                 function fn_1026_c_email (){
-                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["VAR_REQUISITION_LOCATION"]]["Email"];
+                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["location"]]["Email"];
                 }
 
             //*************** lists *****************
@@ -477,6 +482,9 @@ angular.module('wowjsons')
                     return fn_1026_band_level_list();
                 case "fn_1026_band_industry_list":
                     return fn_1026_band_industry_list();
+
+                case "fn_1026_get_annual_compensation":
+                    return fn_1026_get_annual_compensation();
 
                 case "fn_1026_get_string_annual_compensation":
                     return fn_1026_get_string_annual_compensation();
