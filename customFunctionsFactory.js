@@ -285,19 +285,19 @@ angular.module('wowjsons')
 
             //*************** address *****************
                 function fn_1026_c_address (){
-                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["location"]]["Address"];
+                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["VAR_REQUISITION_LOCATION"]]["Address"];
                 }
 
                 function fn_1026_c_contact_person (){
-                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["location"]]["Name"];
+                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["VAR_REQUISITION_LOCATION"]]["Name"];
                 }
 
                 function fn_1026_c_contact_no (){
-                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["location"]]["Contact"];
+                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["VAR_REQUISITION_LOCATION"]]["Contact"];
                 }
 
                 function fn_1026_c_email (){
-                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["location"]]["Email"];
+                    return wowCustomFunctionsFactory.data[1026].location[inputVars.customFieldsMap["VAR_REQUISITION_LOCATION"]]["Email"];
                 }
 
             //*************** lists *****************
@@ -460,7 +460,9 @@ angular.module('wowjsons')
                 case "fn_1026_pf":
                     return fn_1026_pf();
                 case "fn_1026_pda":
-                    return fn_1026_pda();    
+                    return fn_1026_pda();                    
+                case "fn_1026_office_address":
+                    return fn_1026_office_address();
                     
                 case "fn_1026_c_address":
                     return fn_1026_c_address(); 
