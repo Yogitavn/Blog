@@ -430,7 +430,7 @@ angular.module('wowjsons')
             }
 
             function fn_1026_get_joining_bonus_clause (){
-                if(inputVars.customFieldsMap["joining_bonus"]>0){
+                if(inputVars.customFieldsMap["joining_bonus"] > 0){
                     return "A. Joining Bonus : You shall be eligible to receive INR " + inputVars.customFieldsMap["joining_bonus"].toString() +
                     "/ - ("+ get_string_number(inputVars.customFieldsMap["joining_bonus"]) +") as a onetime joining bonus. The same would be paid to you along with your first salary payment. The full amount of joining bonus will be recovered from you in case you resign or your employment is terminated within 1 (One) year from the date of joining. In any such case, the Company shall be entitled, at its discretion, to set-off/adjust the joining bonus against the salary in lieu of notice payable (if any) at the time of resignation/ termination (as the case may be).";
                 }
