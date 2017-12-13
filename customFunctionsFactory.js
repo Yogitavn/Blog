@@ -31,96 +31,128 @@ angular.module('wowjsons')
                     "Band 1 Level A": {
                         "gmc_premium": 14000,
                         "gpa_premium": 1250,
+                        "gmc_cover": 200000,
+                        "gpa_cover": 1000000,
                         "pvb": "50000",
                         "designations": "Associate Engineer,Analyst,Associate Executive"
                     },
                     "Band 1 Level B": {
                         "gmc_premium": 14000,
                         "gpa_premium": 1250,
+                        "gmc_cover": 200000,
+                        "gpa_cover": 1000000,
                         "pvb": "55000",
                         "designations": "Technical Associate,Business Analyst,Executive"
                     },
                     "Band 1 Level C": {
                         "gmc_premium": 14000,
                         "gpa_premium": 1250,
+                        "gmc_cover": 200000,
+                        "gpa_cover": 1000000,
                         "pvb": "65000",
                         "designations": "Sr. Technical Associate,Sr. Business Analyst,Sr. Executive"
                     },
                     "Band 2 Level A": {
                         "gmc_premium": 20000,
                         "gpa_premium": 1750,
+                        "gmc_cover": 300000,
+                        "gpa_cover": 1500000,
                         "pvb": "125000",
                         "designations": "Technical Lead,Consultant,Asst. Manager"
                     },
                     "Band 2 Level B": {
                         "gmc_premium": 20000,
                         "gpa_premium": 1750,
+                        "gmc_cover": 300000,
+                        "gpa_cover": 1500000,
                         "pvb": "175000",
                         "designations": "Project Lead,Technical Specialist,Sr. Consultant(Sr.Advisor)*,Dy. Manager"
                     },
                     "Band 2 Level C": {
                         "gmc_premium": 20000,
                         "gpa_premium": 1750,
+                        "gmc_cover": 300000,
+                        "gpa_cover": 1500000,
                         "pvb": "225000",
                         "designations": "Project Manager,Architect,Lead Consultant(Lead Advisor)*,Manager"
                     },
                     "Band 3 Level A": {
                         "gmc_premium": 30000,
                         "gpa_premium": 3000,
+                        "gmc_cover": 500000,
+                        "gpa_cover": 2000000,
                         "pvb": "350000",
                         "designations": "Group Manager,Sr. Architect,Principal Consultant,(Principal Advisor)*,Team Manager"
                     },
                     "Band 3 Level B": {
                         "gmc_premium": 30000,
                         "gpa_premium": 3000,
+                        "gmc_cover": 500000,
+                        "gpa_cover": 2000000,
                         "pvb": "400000",
                         "designations": "Delivery Manager,Principal Architect,Sr.Principal Consultant (Sr.Principal Advisor)*,Sr. Manager,Sr.Principal Consultant (Sr.Principal Advisor)*"
                     },
                     "Band 3 Level C": {
                         "gmc_premium": 30000,
                         "gpa_premium": 3000,
+                        "gmc_cover": 500000,
+                        "gpa_cover": 2000000,
                         "pvb": "450000",
                         "designations": "Sr Delivery Manager,Sr. Principal Architect,General Manager,Sr.Principal Consultant (Sr.Principal Advisor)*"
                     },
                     "Band 4 Level A": {
                         "gmc_premium": 46000,
                         "gpa_premium": 4000,
+                        "gmc_cover": 800000,
+                        "gpa_cover": 2500000,
                         "pvb": "650000",
                         "designations": "Asst Director"
                     },
                     "Band 4 Level B": {
                         "gmc_premium": 46000,
                         "gpa_premium": 4000,
+                        "gmc_cover": 800000,
+                        "gpa_cover": 2500000,
                         "pvb": "750000",
                         "designations": "Director"
                     },
                     "Band 4 Level C": {
                         "gmc_premium": 46000,
                         "gpa_premium": 4000,
+                        "gmc_cover": 800000,
+                        "gpa_cover": 2500000,
                         "pvb": "850000",
                         "designations": "Sr. Director"
                     },
                     "Band 5 Level A": {
                         "gmc_premium": 60000,
                         "gpa_premium": 5000,
+                        "gmc_cover": 1000000,
+                        "gpa_cover": 10000000,
                         "pvb": "1200000",
                         "designations": "AVP"
                     },
                     "Band 5 Level B": {
                         "gmc_premium": 60000,
                         "gpa_premium": 5000,
+                        "gmc_cover": 1000000,
+                        "gpa_cover": 10000000,
                         "pvb": "1500000",
                         "designations": "Divisional VP"
                     },
                     "Band 5 Level C": {
                         "gmc_premium": 60000,
                         "gpa_premium": 5000,
+                        "gmc_cover": 1000000,
+                        "gpa_cover": 10000000,
                         "pvb": "1800000",
                         "designations": "Sr. Divisional VP"
                     },
                     "Band 6": {
                         "gmc_premium": 70000,
                         "gpa_premium": 10000,
+                        "gmc_cover": 1000000,
+                        "gpa_cover": 10000000,
                         "pvb": "0",
                         "designations": "VP,Sr. VP"
                     }
@@ -131,108 +163,144 @@ angular.module('wowjsons')
                     "Band O Level 1": {
                         "gmc_premium": 14000,
                         "gpa_premium": 1250,
+                        "gmc_cover":200000,
+                        "gpa_cover":1000000,
                         "pvb": 45000,
                         "designations": "Subject Matter Expert,Jr Analyst"
                     },
                     "Band O Level 2": {
                         "gmc_premium": 14000,
                         "gpa_premium": 1250,
+                        "gmc_cover":200000,
+                        "gpa_cover":1000000,
                         "pvb": 55000,
                         "designations": "Team Leader,Analyst"
                     },
                     "Band O Level 3": {
                         "gmc_premium": 14000,
                         "gpa_premium": 1250,
+                        "gmc_cover":200000,
+                        "gpa_cover":1000000,
                         "pvb": 65000,
                         "designations": "Sr Team Leader,Sr Analyst"
                     },
                     "Band P Level 1": {
                         "gmc_premium": 20000,
                         "gpa_premium": 1750,
+                        "gmc_cover":300000,
+                        "gpa_cover": 1500000,
                         "pvb": 125000,
                         "designations": "Assistant Manager"
                     },
                     "Band P Level 2": {
                         "gmc_premium": 20000,
                         "gpa_premium": 1750,
+                        "gmc_cover":300000,
+                        "gpa_cover": 1500000,
                         "pvb": 175000,
                         "designations": "Deputy Manager"
                     },
                     "Band P Level 3": {
                         "gmc_premium": 20000,
                         "gpa_premium": 1750,
+                        "gmc_cover":300000,
+                        "gpa_cover": 1500000,
                         "pvb": 225000,
                         "designations": "Operations Manager"
                     },
                     "Band Q Level 1": {
                         "gmc_premium": 30000,
                         "gpa_premium": 3000,
+                        "gmc_cover": 500000,
+                        "gpa_cover": 2000000,
                         "pvb": 350000,
                         "designations": "Group Manager"
                     },
                     "Band Q Level 2": {
                         "gmc_premium": 30000,
                         "gpa_premium": 3000,
+                        "gmc_cover": 500000,
+                        "gpa_cover": 2000000,
                         "pvb": 400000,
                         "designations": "Delivery Manager"
                     },
                     "Band Q Level 3": {
                         "gmc_premium": 30000,
                         "gpa_premium": 3000,
+                        "gmc_cover": 500000,
+                        "gpa_cover": 2000000,
                         "pvb": 450000,
                         "designations": "Sr. Delivery Manager"
                     },
                     "Band R Level 1": {
                         "gmc_premium": 46000,
                         "gpa_premium": 4000,
+                        "gmc_cover": 800000,
+                        "gpa_cover": 2500000,
                         "pvb": 650000,
                         "designations": "Associate Director"
                     },
                     "Band R Level 2": {
                         "gmc_premium": 46000,
                         "gpa_premium": 4000,
+                        "gmc_cover": 800000,
+                        "gpa_cover": 2500000,
                         "pvb": 750000,
                         "designations": "Director"
                     },
                     "Band R Level 3": {
                         "gmc_premium": 46000,
                         "gpa_premium": 4000,
+                        "gmc_cover": 800000,
+                        "gpa_cover": 2500000,
                         "pvb": 850000,
                         "designations": "Sr. Director"
                     },
                     "Band S Level 1": {
                         "gmc_premium": 60000,
                         "gpa_premium": 5000,
+                        "gmc_cover": 1000000,
+                        "gpa_cover": 10000000,
                         "pvb": 1200000,
                         "designations": ""
                     },
                     "Band S Level 2": {
                         "gmc_premium": 60000,
                         "gpa_premium": 5000,
+                        "gmc_cover": 1000000,
+                        "gpa_cover": 10000000,
                         "pvb": 1500000,
                         "designations": ""
                     },
                     "Band S Level 3": {
                         "gmc_premium": 60000,
                         "gpa_premium": 5000,
+                        "gmc_cover": 1000000,
+                        "gpa_cover": 10000000,
                         "pvb": 1800000,
                         "designations": ""
                     },
                     "Band N Level 1": {
                         "gmc_premium": 8000,
                         "gpa_premium": 250,
+                        "gmc_cover": 175000,
+                        "gpa_cover": 500000,
                         "pvb": 25000,
                         "designations": "Jr Advisor"
                     },
                     "Band N Level 2": {
                         "gmc_premium": 8000,
                         "gpa_premium": 250,
+                        "gmc_cover": 175000,
+                        "gpa_cover": 500000,
                         "pvb": 25000,
                         "designations": "Advisor"
                     },
                     "Band N Level 3": {
                         "gmc_premium": 8000,
                         "gpa_premium": 250,
+                        "gmc_cover": 175000,
+                        "gpa_cover": 500000,
                         "pvb": 25000,
                         "designations": "Sr Advisor,Trainee Analyst"
                     }
@@ -285,7 +353,15 @@ angular.module('wowjsons')
             }
 
             function fn_1026_group_personal_accident_insurance (){
-                return parseFloat(Number(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_premium"]).toFixed(2));
+                return parseFloat(Number(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_premium"]).toFixed(2));
+            }
+
+            function fn_1026_group_medical_cover (){
+                return parseFloat(Number(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_cover"]).toFixed(2));
+            }
+
+            function fn_1026_group_personal_accident_cover (){
+                return parseFloat(Number(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_cover"]).toFixed(2));
             }
 
             function fn_1026_transport_allowance (){
@@ -344,17 +420,19 @@ angular.module('wowjsons')
 
             function fn_1026_get_serial_no (){
                 return "SHI#" + inputVars["posNo"];
-                //  Object.keys(wowCustomFunctionsFactory.data[1026].industry).toString();
             }
 
             function fn_1026_get_annual_compensation (){
                 return inputVars["ctcOffered"];
-                //  Object.keys(wowCustomFunctionsFactory.data[1026].industry).toString();
             }
 
             function fn_1026_get_string_annual_compensation (){
                 return get_string_number(inputVars.customFieldsMap["annual_compensation"])
-                //  Object.keys(wowCustomFunctionsFactory.data[1026].industry).toString();
+            }
+
+            function fn_1026_get_joining_bonus_clause (){
+                return "You shall be eligible to receive INR " + inputVars.customFieldsMap["joining_bonus"].toString() +
+                "/ - ("+ get_string_number(inputVars.customFieldsMap["joining_bonus"]) +") as a onetime joining bonus. The same would be paid to you along with your first salary payment. The full amount of joining bonus will be recovered from you in case you resign or your employment is terminated within 1 (One) year from the date of joining. In any such case, the Company shall be entitled, at its discretion, to set-off/adjust the joining bonus against the salary in lieu of notice payable (if any) at the time of resignation/ termination (as the case may be).";
             }
             
 
@@ -383,7 +461,6 @@ angular.module('wowjsons')
 
             function fn_1026_designation_list (){
                 return wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]].designations.toString();
-                // Object.keys(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].designations).toString();
             }
 
             function fn_1026_band_industry_list (){
@@ -393,8 +470,8 @@ angular.module('wowjsons')
             function fn_1026_c_location_list (){
                 return Object.keys(wowCustomFunctionsFactory.data[1026].location).toString();
             }
-            
 
+            
         //************common**********************
 
             var iWords = ['Zero', ' One', ' Two', ' Three', ' Four', ' Five', ' Six', ' Seven', ' Eight', ' Nine'];
@@ -436,8 +513,6 @@ angular.module('wowjsons')
                     window.alert('Oops!!!! the Number is too big to covertes');
                     return false;
                 }
-            
-            
             
                 var iWordsLength = numReversed.length;
                 var finalWord = '';
@@ -529,6 +604,13 @@ angular.module('wowjsons')
                 return fn_1026_group_medical_insurance();
             case "fn_1026_group_personal_accident_insurance":
                 return fn_1026_group_personal_accident_insurance();
+            case "fn_1026_group_medical_cover":
+                return fn_1026_group_medical_cover();
+            case "fn_1026_group_personal_accident_cover":
+                return fn_1026_group_personal_accident_cover();
+            case "fn_1026_get_joining_bonus_clause":
+                return fn_1026_get_joining_bonus_clause();                
+
             case "fn_1026_get_serial_no":
                 return fn_1026_get_serial_no();
             case "fn_1026_bonus_type":
