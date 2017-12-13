@@ -328,9 +328,7 @@ angular.module('wowjsons')
         //*************** offer *******************
 
             function fn_1026_retention_bonus (){
-                
                 return wowCustomFunctionsFactory.data[1026].industry['It'].band_level[inputVars.customFieldsMap["band_level"]]["pvb"];
-
             }
 
             function fn_1026_bonus_type (){
@@ -349,24 +347,24 @@ angular.module('wowjsons')
             }
 
             function fn_1026_group_medical_insurance (){
-                return parseFloat(Number(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_premium"]).toFixed(2));
+                return Math.floor(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_premium"]);
             }
 
             function fn_1026_group_personal_accident_insurance (){
-                return parseFloat(Number(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_premium"]).toFixed(2));
+                return Math.floor(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_premium"]);
             }
 
             function fn_1026_group_medical_cover (){
-                return parseFloat(Number(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_cover"]).toFixed(2));
+                return Math.floor(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_cover"]);
             }
 
             function fn_1026_group_personal_accident_cover (){
-                return parseFloat(Number(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_cover"]).toFixed(2));
+                return Math.floor(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_cover"]);
             }
 
             function fn_1026_transport_allowance (){
                 if(inputVars.customFieldsMap["annual_compensation"] > 0){
-                    return parseFloat(Number(wowCustomFunctionsFactory.data[1026].transport_allowance).toFixed(2));
+                    return Math.floor(wowCustomFunctionsFactory.data[1026].transport_allowance);
                 }else{
                     return 0;
                 }
@@ -387,7 +385,7 @@ angular.module('wowjsons')
                 if((inputVars.customFieldsMap["fixed_component"]*0.35) < 126000){
                     return 126000;
                 }else{
-                    return parseFloat(Number((inputVars.customFieldsMap["fixed_component"])*0.35).toFixed(2));
+                    return Math.floor((inputVars.customFieldsMap["fixed_component"])*0.35);
                 }
             }
 
@@ -395,24 +393,25 @@ angular.module('wowjsons')
                 if(inputVars.customFieldsMap["basic"] > 180000){
                     return 180000 * 0.12;
                 }else{
-                    return parseFloat(Number(inputVars.customFieldsMap["basic"] * 0.12).toFixed(2));
+                    return Math.floor(inputVars.customFieldsMap["basic"] * 0.12);
                 }
             }
 
             function fn_1026_pda (){
-                if(inputVars.customFieldsMap["annual_compensation"] > 0){
-                    return (parseFloat(inputVars.customFieldsMap["annual_compensation"]) - 
-                    (
-                        parseFloat(inputVars.customFieldsMap["basic"]) +
-                        parseFloat(inputVars.customFieldsMap["hra"]) + 
-                        parseFloat(inputVars.customFieldsMap["transport"]) + 
-                        parseFloat(inputVars.customFieldsMap["medical_reimbursment"]) +
-                        parseFloat(inputVars.customFieldsMap["lta"]) + 
-                        parseFloat(inputVars.customFieldsMap["gmc"]) +
-                        parseFloat(inputVars.customFieldsMap["gpa"]) + 
-                        parseFloat(inputVars.customFieldsMap["gratuity"]) +
-                        parseFloat(inputVars.customFieldsMap["pf"])
-                    ));
+                if(inputVars.customFieldsMap["fixed_component"] > 0){
+                    return Math.floor(parseFloat(inputVars.customFieldsMap["fixed_component"]) - 
+                                (
+                                    parseFloat(inputVars.customFieldsMap["basic"]) +
+                                    parseFloat(inputVars.customFieldsMap["hra"]) + 
+                                    parseFloat(inputVars.customFieldsMap["transport"]) + 
+                                    parseFloat(inputVars.customFieldsMap["medical_reimbursment"]) +
+                                    parseFloat(inputVars.customFieldsMap["lta"]) + 
+                                    parseFloat(inputVars.customFieldsMap["gmc"]) +
+                                    parseFloat(inputVars.customFieldsMap["gpa"]) + 
+                                    parseFloat(inputVars.customFieldsMap["gratuity"]) +
+                                    parseFloat(inputVars.customFieldsMap["pf"])
+                                )
+                           );
                 }else{
                     return 0;
                 }
