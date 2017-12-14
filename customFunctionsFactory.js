@@ -418,7 +418,7 @@ angular.module('wowjsons')
             }
 
             function fn_1026_get_serial_no (){
-                return "SHI#" + inputVars["posNo"];
+                return "SHI#" + selectedAaListItem.applicant.id;
             }
 
             function fn_1026_get_annual_compensation (){
