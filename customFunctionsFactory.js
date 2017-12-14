@@ -347,11 +347,25 @@ angular.module('wowjsons')
             }
 
             function fn_1026_group_medical_insurance (){
-                return Math.round(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_premium"]);
+                if(inputVars.customFieldsMap["annual_compensation"] > 0 
+                && inputVars.customFieldsMap["band_level"]!='Band N Level 1'
+                && inputVars.customFieldsMap["band_level"]!='Band N Level 2'
+                && inputVars.customFieldsMap["band_level"]!='Band N Level 3'){
+                    return Math.round(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_premium"]);
+                }else{
+                    return 0;
+                }
             }
 
             function fn_1026_group_personal_accident_insurance (){
-                return Math.round(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_premium"]);
+                if(inputVars.customFieldsMap["annual_compensation"] > 0 
+                && inputVars.customFieldsMap["band_level"]!='Band N Level 1'
+                && inputVars.customFieldsMap["band_level"]!='Band N Level 2'
+                && inputVars.customFieldsMap["band_level"]!='Band N Level 3'){
+                    return Math.round(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_premium"]);
+                }else{
+                    return 0;
+                }
             }
 
             function fn_1026_group_medical_cover (){
@@ -416,6 +430,18 @@ angular.module('wowjsons')
                     return 0;
                 }
             }
+
+            function fn_1026_lta(){
+                if(inputVars.customFieldsMap["annual_compensation"] > 0 
+                && inputVars.customFieldsMap["band_level"]!='Band N Level 1'
+                && inputVars.customFieldsMap["band_level"]!='Band N Level 2'
+                && inputVars.customFieldsMap["band_level"]!='Band N Level 3'){
+                    return Math.round(inputVars.customFieldsMap["basic"] / 12);
+                }else{
+                    return 0;
+                }
+            }
+            
 
             function fn_1026_get_serial_no (){
                 return "SHI#" + selectedAaListItem.applicant.id;
@@ -610,6 +636,8 @@ angular.module('wowjsons')
                 return fn_1026_group_personal_accident_insurance();
             case "fn_1026_group_medical_cover":
                 return fn_1026_group_medical_cover();
+            case "fn_1026_lta":
+                return fn_1026_lta();
             case "fn_1026_group_personal_accident_cover":
                 return fn_1026_group_personal_accident_cover();
             case "fn_1026_get_joining_bonus_clause":
