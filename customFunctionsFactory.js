@@ -7,7 +7,7 @@ angular.module('wowjsons')
     wowCustomFunctionsFactory.data[1026] = {
         "location": {
           "Bengaluru": {
-            "Address": "Sears IT & Management Services India Pvt. Ltd. 7th floor, 2B Building, Tower 2, Embassy Tech Village, Near New Horizon College, Devarabisanahalli,Bangalore - 560103",
+            "Address": "Sears IT & Management Services India Pvt. Ltd. 7th round, 2B Building, Tower 2, Embassy Tech Village, Near New Horizon College, Devarabisanahalli,Bangalore - 560103",
             "Name": "Mrs. Mahima Tiwari",
             "Contact": "+91 7338699304",
             "Email": "Mahima.Tiwari@searshc.com"
@@ -19,7 +19,7 @@ angular.module('wowjsons')
             "Email": "Percy.Sutaria@searshc.com"
           },
           "Pune": {
-            "Address": "Sears IT and Management Services India Pvt. Ltd, EON Free Zone, Cluster D, Wing 2, 4th Floor,MIDC Kharadi Knowledge Park,Pune -411014 ",
+            "Address": "Sears IT and Management Services India Pvt. Ltd, EON Free Zone, Cluster D, Wing 2, 4th round,MIDC Kharadi Knowledge Park,Pune -411014 ",
             "Name": "Mr. Mohbansi Devendra & Mr. Paresh Naik",
             "Contact": "+91 8411009671 & +91 841109545",
             "Email": "Devendra.Mohbansi@searshc.com & Paresh.Naik@searshc.com"
@@ -347,24 +347,24 @@ angular.module('wowjsons')
             }
 
             function fn_1026_group_medical_insurance (){
-                return Math.floor(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_premium"]);
+                return Math.round(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_premium"]);
             }
 
             function fn_1026_group_personal_accident_insurance (){
-                return Math.floor(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_premium"]);
+                return Math.round(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_premium"]);
             }
 
             function fn_1026_group_medical_cover (){
-                return Math.floor(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_cover"]);
+                return Math.round(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gmc_cover"]);
             }
 
             function fn_1026_group_personal_accident_cover (){
-                return Math.floor(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_cover"]);
+                return Math.round(wowCustomFunctionsFactory.data[1026].industry[inputVars.customFieldsMap["business"]].band_level[inputVars.customFieldsMap["band_level"]]["gpa_cover"]);
             }
 
             function fn_1026_transport_allowance (){
                 if(inputVars.customFieldsMap["annual_compensation"] > 0){
-                    return Math.floor(wowCustomFunctionsFactory.data[1026].transport_allowance);
+                    return Math.round(wowCustomFunctionsFactory.data[1026].transport_allowance);
                 }else{
                     return 0;
                 }
@@ -385,7 +385,7 @@ angular.module('wowjsons')
                 if((inputVars.customFieldsMap["fixed_component"]*0.35) < 126000){
                     return 126000;
                 }else{
-                    return Math.floor((inputVars.customFieldsMap["fixed_component"])*0.35);
+                    return Math.round((inputVars.customFieldsMap["fixed_component"])*0.35);
                 }
             }
 
@@ -393,13 +393,13 @@ angular.module('wowjsons')
                 if(inputVars.customFieldsMap["basic"] > 180000){
                     return 180000 * 0.12;
                 }else{
-                    return Math.floor(inputVars.customFieldsMap["basic"] * 0.12);
+                    return Math.round(inputVars.customFieldsMap["basic"] * 0.12);
                 }
             }
 
             function fn_1026_pda (){
                 if(inputVars.customFieldsMap["fixed_component"] > 0){
-                    return Math.floor(parseFloat(inputVars.customFieldsMap["fixed_component"]) - 
+                    return Math.round(parseFloat(inputVars.customFieldsMap["fixed_component"]) - 
                                 (
                                     parseFloat(inputVars.customFieldsMap["basic"]) +
                                     parseFloat(inputVars.customFieldsMap["hra"]) + 
@@ -498,7 +498,7 @@ angular.module('wowjsons')
             
             function get_string_number(junkVal) {
                 'use strict';
-                junkVal = Math.floor(junkVal);
+                junkVal = Math.round(junkVal);
                 var obStr = junkVal.toString();
                 numReversed = obStr.split('');
                 actnumber = numReversed.reverse();
