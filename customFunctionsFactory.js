@@ -449,13 +449,13 @@ angular.module('wowjsons')
             }
 
             function fn_1026_get_string_annual_compensation (){
-                return get_string_number(inputVars.customFieldsMap["annual_compensation"])
+                return inWords(inputVars.customFieldsMap["annual_compensation"])
             }
 
             function fn_1026_get_joining_bonus_clause (){
                 if(inputVars.customFieldsMap["joining_bonus"] > 0){
                     return "A. Joining Bonus : You shall be eligible to receive INR " + inputVars.customFieldsMap["joining_bonus"].toString() +
-                    "/ - ("+ get_string_number(inputVars.customFieldsMap["joining_bonus"]) +") as a onetime joining bonus. The same would be paid to you along with your first salary payment. The full amount of joining bonus will be recovered from you in case you resign or your employment is terminated within 1 (One) year from the date of joining. In any such case, the Company shall be entitled, at its discretion, to set-off/adjust the joining bonus against the salary in lieu of notice payable (if any) at the time of resignation/ termination (as the case may be).";
+                    "/ - ("+ inWords(inputVars.customFieldsMap["joining_bonus"]) +") as a onetime joining bonus. The same would be paid to you along with your first salary payment. The full amount of joining bonus will be recovered from you in case you resign or your employment is terminated within 1 (One) year from the date of joining. In any such case, the Company shall be entitled, at its discretion, to set-off/adjust the joining bonus against the salary in lieu of notice payable (if any) at the time of resignation/ termination (as the case may be).";
                 }
                 else{
                     return '';
@@ -552,122 +552,20 @@ angular.module('wowjsons')
             
         //************common**********************
 
-            var iWords = ['Zero', ' One', ' Two', ' Three', ' Four', ' Five', ' Six', ' Seven', ' Eight', ' Nine'];
-            var ePlace = ['Ten', ' Eleven', ' Twelve', ' Thirteen', ' Fourteen', ' Fifteen', ' Sixteen', ' Seventeen', ' Eighteen', ' Nineteen'];
-            var tensPlace = ['', ' Ten', ' Twenty', ' Thirty', ' Forty', ' Fifty', ' Sixty', ' Seventy', ' Eighty', ' Ninety'];
-            var inWords = [];
-            
-            var numReversed, inWords, actnumber, i, j;
-            
-            function tens_complication() {
-                'use strict';
-                if (actnumber[i] === 0) {
-                    inWords[j] = '';
-                } else if (actnumber[i] === 1) {
-                    inWords[j] = ePlace[actnumber[i - 1]];
-                } else {
-                    inWords[j] = tensPlace[actnumber[i]];
-                }
-            }
-            
-            function get_string_number(junkVal) {
-                'use strict';
-                junkVal = Math.round(junkVal);
-                var obStr = junkVal.toString();
-                numReversed = obStr.split('');
-                actnumber = numReversed.reverse();
-            
-                if (Number(junkVal) >= 0) {
-                    //do nothing
-                } else {
-                    window.alert('wrong Number cannot be converted');
-                    return false;
-                }
-                if (Number(junkVal) === 0) {
-                    document.getElementById('container').innerHTML = obStr + '' + 'Rupees Zero Only';
-                    return false;
-                }
-                if (actnumber.length > 9) {
-                    window.alert('Oops!!!! the Number is too big to covertes');
-                    return false;
-                }
-            
-                var iWordsLength = numReversed.length;
-                var finalWord = '';
-                j = 0;
-                for (i = 0; i < iWordsLength; i++) {
-                    switch (i) {
-                        case 0:
-                            if (actnumber[i] === '0' || actnumber[i + 1] === '1') {
-                                inWords[j] = '';
-                            } else {
-                                inWords[j] = iWords[actnumber[i]];
-                            }
-                            inWords[j] = inWords[j] + ' Only';
-                            break;
-                        case 1:
-                            tens_complication();
-                            break;
-                        case 2:
-                            if (actnumber[i] === '0') {
-                                inWords[j] = '';
-                            } else if (actnumber[i - 1] !== '0' && actnumber[i - 2] !== '0') {
-                                inWords[j] = iWords[actnumber[i]] + ' Hundred and';
-                            } else {
-                                inWords[j] = iWords[actnumber[i]] + ' Hundred';
-                            }
-                            break;
-                        case 3:
-                            if (actnumber[i] === '0' || actnumber[i + 1] === '1') {
-                                inWords[j] = '';
-                            } else {
-                                inWords[j] = iWords[actnumber[i]];
-                            }
-                            if (actnumber[i + 1] !== '0' || actnumber[i] > '0') {
-                                inWords[j] = inWords[j] + ' Thousand';
-                            }
-                            break;
-                        case 4:
-                            tens_complication();
-                            break;
-                        case 5:
-                            if (actnumber[i] === '0' || actnumber[i + 1] === '1') {
-                                inWords[j] = '';
-                            } else {
-                                inWords[j] = iWords[actnumber[i]];
-                            }
-                            if (actnumber[i + 1] !== '0' || actnumber[i] > '0') {
-                                inWords[j] = inWords[j] + ' Lakh';
-                            }
-                            break;
-                        case 6:
-                            tens_complication();
-                            break;
-                        case 7:
-                            if (actnumber[i] === '0' || actnumber[i + 1] === '1') {
-                                inWords[j] = '';
-                            } else {
-                                inWords[j] = iWords[actnumber[i]];
-                            }
-                            inWords[j] = inWords[j] + ' Crore';
-                            break;
-                        case 8:
-                            tens_complication();
-                            break;
-                        default:
-                            break;
-                    }
-                    j++;
-                }
-            
-                inWords.reverse();
-                for (i = 0; i < inWords.length; i++) {
-                    finalWord += inWords[i];
-                }
-                return finalWord;
-            }
+        var a = ['','one ','two ','three ','four ', 'five ','six ','seven ','eight ','nine ','ten ','eleven ','twelve ','thirteen ','fourteen ','fifteen ','sixteen ','seventeen ','eighteen ','nineteen '];
+        var b = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','ninety'];
         
-        
+        function inWords (num) {
+            if ((num = num.toString()).length > 9) return 'overflow';
+            n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+            if (!n) return; var str = '';
+            str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'crore ' : '';
+            str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'lakh ' : '';
+            str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'thousand ' : '';
+            str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'hundred ' : '';
+            str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'only ' : 'only';
+            return str;
+        }
 
         switch(functionName){
             case "fn_1026_designation_list":
