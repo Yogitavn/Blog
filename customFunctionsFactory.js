@@ -394,11 +394,40 @@ angular.module('wowjsons')
             }
 
             function fn_1026_basic (){
-                if((inputVars.customFieldsMap["fixed_component"]*0.35) < 126000){
-                    return 126000;
-                }else{
-                    return Math.round((inputVars.customFieldsMap["fixed_component"])*0.35);
+
+                var basic = inputVars.customFieldsMap["fixed_component"]*0.35;
+                
+                if((inputVars.customFieldsMap["business"] === 'IT' 
+                && inputVars.customFieldsMap["fixed_component"]*0.35) < 126000){
+                    basic =  126000;
                 }
+
+                if(inputVars.customFieldsMap["business"] === 'BPM' 
+                && inputVars.customFieldsMap["band_level"].search('Band O') > -1){
+                    if(inputVars.customFieldsMap["fixed_component"]<1000000){
+                        basic = inputVars.customFieldsMap["fixed_component"]*0.16;
+                    }
+                }
+
+                return basic;
+
+
+                // if((inputVars.customFieldsMap["fixed_component"]*0.35) < 126000){
+                //     return 126000;
+                // }else{
+                //         if(inputVars.customFieldsMap["band_level"]!='Band O Level 1'
+                //         && inputVars.customFieldsMap["band_level"]!='Band O Level 2'
+                //         && inputVars.customFieldsMap["band_level"]!='Band O Level 3'){
+                //             if(inputVars.customFieldsMap["fixed_component"] < 1000000){
+                //                 return Math.round((inputVars.customFieldsMap["fixed_component"])*0.16);
+                //             }else{
+                //                 return Math.round((inputVars.customFieldsMap["fixed_component"])*0.35);
+                //             }
+                //         }
+                //         else{
+                //             return Math.round((inputVars.customFieldsMap["fixed_component"])*0.35);
+                //         }
+                //     }
             }
 
             function fn_1026_pf (){
