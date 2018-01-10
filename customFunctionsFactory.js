@@ -467,7 +467,6 @@ angular.module('wowjsons')
                     return 0;
                 }
             }
-            
 
             function fn_1026_get_serial_no (){
                 return "SHI#" + selectedAaListItem.applicant.id;
@@ -501,6 +500,7 @@ angular.module('wowjsons')
                     return "-";
                 }
             }
+
             function fn_1026_get_medical_reimbursment_clause(){
                 if(inputVars.customFieldsMap["annual_compensation"] > 0 
                 && inputVars.customFieldsMap["band_level"]!='Band N Level 1'
@@ -511,6 +511,7 @@ angular.module('wowjsons')
                     return "-";
                 }
             } 
+            
             function fn_1026_lta_clause(){
                 if(inputVars.customFieldsMap["annual_compensation"] > 0 
                 && inputVars.customFieldsMap["band_level"]!='Band N Level 1'
@@ -520,7 +521,8 @@ angular.module('wowjsons')
                 }else{
                     return "-";
                 }
-            }   
+            }  
+
             function fn_1026_group_medical_insurance_clause(){
                 if(inputVars.customFieldsMap["annual_compensation"] > 0 
                 && inputVars.customFieldsMap["band_level"]!='Band N Level 1'
@@ -531,6 +533,7 @@ angular.module('wowjsons')
                     return "-";
                 }
             }
+
             function fn_1026_group_personal_accident_insurance_clause(){
                 if(inputVars.customFieldsMap["annual_compensation"] > 0 
                 && inputVars.customFieldsMap["band_level"]!='Band N Level 1'
@@ -540,8 +543,15 @@ angular.module('wowjsons')
                 }else{
                     return "-";
                 }
+            }
+
+            function fn_1026_notice_period_clause(){
+                if(inputVars.customFieldsMap["band_level"].search('Band N') > -1){
+                    return "30 days";
+                }else{
+                    return "90 days";
+                }
             } 
-            
 
         //*************** address *****************
             function fn_1026_c_address (){
@@ -625,7 +635,9 @@ angular.module('wowjsons')
             case "fn_1026_group_medical_insurance_clause":
                 return fn_1026_group_medical_insurance_clause();
             case "fn_1026_group_personal_accident_insurance_clause":
-                return fn_1026_group_personal_accident_insurance_clause();                            
+                return fn_1026_group_personal_accident_insurance_clause();
+            case "fn_1026_notice_period_clause":
+                return fn_1026_notice_period_clause();                            
 
             case "fn_1026_get_serial_no":
                 return fn_1026_get_serial_no();
