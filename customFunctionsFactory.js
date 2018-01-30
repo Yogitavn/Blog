@@ -468,6 +468,11 @@ angular.module('wowjsons')
                 }
             }
 
+            function fn_1026_hike(){
+               return Math.round(((inputVars.ctcOffered - selectedAaListItem.applicant.applicantBO.applicantAttributesBO.currentCtc)/
+               selectedAaListItem.applicant.applicantBO.applicantAttributesBO.currentCtc)*100);
+            }
+
             function fn_1026_get_serial_no (){
                 return "SHI#" + selectedAaListItem.applicant.id;
             }
@@ -654,7 +659,9 @@ angular.module('wowjsons')
             case "fn_1026_pf":
                 return fn_1026_pf();
             case "fn_1026_pda":
-                return fn_1026_pda();                    
+                return fn_1026_pda();
+            case "fn_1026_hike":
+                return fn_1026_hike();
             case "fn_1026_office_address":
                 return fn_1026_office_address();
                
