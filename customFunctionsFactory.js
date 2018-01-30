@@ -469,10 +469,13 @@ angular.module('wowjsons')
             }
 
             function fn_1026_hike(){
-                if(!inputVars.ctcOffered > 1){
+                if(inputVars.ctcOffered === 0 ||inputVars.ctcOffered === null ||inputVars.ctcOffered === undefined ){
                     return 0;
                 }
-                if(!selectedAaListItem.applicant.applicantBO.applicantAttributesBO.currentCtc  > 1){
+                if(selectedAaListItem.applicant.applicantBO.applicantAttributesBO.currentCtc === 0 ||
+                    selectedAaListItem.applicant.applicantBO.applicantAttributesBO.currentCtc === null ||
+                    selectedAaListItem.applicant.applicantBO.applicantAttributesBO.currentCtc === undefined)
+                {
                     return 100;
                 }
                return Math.round(((inputVars.ctcOffered - selectedAaListItem.applicant.applicantBO.applicantAttributesBO.currentCtc)/
