@@ -305,6 +305,18 @@ angular.module('wowjsons')
                         "designations": "Sr Advisor,Trainee Analyst"
                     }
                 }
+            },
+            "OB": {
+                "band_level": {
+                    "Band 1 Level A": {
+                        "gmc_premium": 14000,
+                        "gpa_premium": 1250,
+                        "gmc_cover":200000,
+                        "gpa_cover":1000000,
+                        "pvb": 45000,
+                        "designations": "Analyst"
+                    }
+                }
             }
         },
         "transport_allowance":19200,
@@ -397,8 +409,8 @@ angular.module('wowjsons')
 
                 var basic = inputVars.customFieldsMap["fixed_component"]*0.35;
                 
-                if((inputVars.customFieldsMap["business"] === 'IT' 
-                && inputVars.customFieldsMap["fixed_component"]*0.35) < 126000){
+                if(inputVars.customFieldsMap["business"] === 'IT' 
+                && (inputVars.customFieldsMap["fixed_component"]*0.35) < 126000){
                     basic =  126000;
                 }
 
