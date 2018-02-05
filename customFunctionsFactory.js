@@ -313,7 +313,7 @@ angular.module('wowjsons')
                         "gpa_premium": 1250,
                         "gmc_cover":200000,
                         "gpa_cover":1000000,
-                        "pvb": 45000,
+                        "pvb": 50000,
                         "designations": "Analyst"
                     }
                 }
