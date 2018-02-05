@@ -344,6 +344,10 @@ angular.module('wowjsons')
             }
 
             function fn_1026_bonus_type (){
+                if(inputVars.customFieldsMap["business"] === 'OB' ){
+                    return "Performance Variable Bonus (PVB)**";
+                }
+
                 if(inputVars.customFieldsMap["band_level"]!='Band N Level 1'&&
                 inputVars.customFieldsMap["band_level"]!='Band N Level 2'&&
                 inputVars.customFieldsMap["band_level"]!='Band N Level 3'&&
