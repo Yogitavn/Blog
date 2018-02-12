@@ -749,6 +749,11 @@ angular.module('wowjsons')
                         ));
                     }
 
+                    function fn_1028_gross_monthly (){
+                       return Math.round(inputVars.customFieldsMap["ctc_offered_monthly"]
+                        - inputVars.customFieldsMap["pf_monthly"] - inputVars.customFieldsMap["gratuity_monthly"]);
+                    }
+                    
             
 
                 
@@ -813,7 +818,6 @@ angular.module('wowjsons')
                     case "fn_1026_bonus_type":
                         return fn_1026_bonus_type();
                         
-
                     case "fn_1026_transport_allowance":
                         return fn_1026_transport_allowance();
                     case "fn_1026_medical_reimbursment":
@@ -853,6 +857,8 @@ angular.module('wowjsons')
                     //CLARION
                     case "fn_1028_offer_type_list":
                         return fn_1028_offer_type_list();
+                    case "fn_1028_gross_monthly":
+                        return fn_1028_gross_monthly();
                     case "fn_1028_offer_sub_type_list":
                         return fn_1028_offer_sub_type_list();
                     case "fn_1028_get_attire_allowance_monthly":
