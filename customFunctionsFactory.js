@@ -526,13 +526,13 @@ angular.module('wowjsons')
 
                     function fn_1026_get_hra (){
                         if(inputVars.customFieldsMap["business"] === 'IT'){
-                           return inputVars.customFieldsMap["basic"] * 0.40;
+                           return Math.round(inputVars.customFieldsMap["basic"] * 0.40);
                         }
                         if(inputVars.customFieldsMap["business"] === 'BPM'){
-                            return inputVars.customFieldsMap["basic"] * 0.35;
+                            return Math.round(inputVars.customFieldsMap["basic"] * 0.35);
                         }
                         else{
-                            return inputVars.customFieldsMap["basic"] * 0.35;
+                            return Math.round(inputVars.customFieldsMap["basic"] * 0.35);
                         }
                     }                    
 
