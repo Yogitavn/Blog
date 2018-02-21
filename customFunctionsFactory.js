@@ -435,15 +435,14 @@ angular.module('wowjsons')
 
                     function fn_1026_basic (){
                         var basic = inputVars.customFieldsMap["fixed_component"]*0.35;
-                        
+
                         if(inputVars.customFieldsMap["business"] === 'IT' 
                         && (inputVars.customFieldsMap["fixed_component"]*0.35) < 126000){
                             basic =  126000;
                         }
 
-                        if(inputVars.customFieldsMap["business"] === 'BPM' 
-                        && inputVars.customFieldsMap["band_level"].search('Band O') > -1){
-                            if(inputVars.customFieldsMap["fixed_component"]<1000000){
+                        if(inputVars.customFieldsMap["business"] === 'BPM'){
+                            if(inputVars.customFieldsMap["annual_compensation"]<1000000){
                                 basic = inputVars.customFieldsMap["fixed_component"]*0.16;
                             }
                         }
@@ -524,6 +523,18 @@ angular.module('wowjsons')
                             return '';
                         }
                     }
+
+                    function fn_1026_get_hra (){
+                        if(inputVars.customFieldsMap["business"] === 'IT'){
+                           return inputVars.customFieldsMap["basic"] * 0.40;
+                        }
+                        if(inputVars.customFieldsMap["business"] === 'BPM'){
+                            return inputVars.customFieldsMap["basic"] * 0.35;
+                        }
+                        else{
+                            return inputVars.customFieldsMap["basic"] * 0.35;
+                        }
+                    }                    
 
                     function fn_1026_get_medical_reimbursment_clause (){
                         if(inputVars.customFieldsMap["annual_compensation"] > 0 
@@ -801,6 +812,8 @@ angular.module('wowjsons')
                         return fn_1026_group_personal_accident_cover();
                     case "fn_1026_get_joining_bonus_clause":
                         return fn_1026_get_joining_bonus_clause();
+                    case "fn_1026_get_hra":
+                        return fn_1026_get_hra();
 
                     case "fn_1026_get_medical_reimbursment_clause":
                         return fn_1026_get_medical_reimbursment_clause(); 
