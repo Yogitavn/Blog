@@ -679,20 +679,21 @@ angular.module('wowjsons')
                 //************** offer ****************
 
                     function fn_1028_get_basic_monthly (){
-                        if(inputVars.ctcOffered < 250001){
-                            return Math.floor(Math.round((inputVars.ctcOffered * 0.4)/12)/100)*100 ;
+                        var ctcOffered = inputVars.ctcOffered - inputVars.customFieldsMap["variable_pay_yearly"];
+                        if(ctcOffered < 250001){
+                            return Math.floor(Math.round((ctcOffered * 0.4)/12)/100)*100 ;
                         }
-                        if(inputVars.ctcOffered < 1200001){
-                            return Math.floor(Math.round((inputVars.ctcOffered * 0.35)/12)/100)*100 ;
+                        if(ctcOffered < 1200001){
+                            return Math.floor(Math.round((ctcOffered * 0.35)/12)/100)*100 ;
                         }
-                        if(inputVars.ctcOffered < 1500001){
-                            return Math.floor(Math.round((inputVars.ctcOffered * 0.3)/12)/100)*100 ;
+                        if(ctcOffered < 1500001){
+                            return Math.floor(Math.round((ctcOffered * 0.3)/12)/100)*100 ;
                         }
-                        if(inputVars.ctcOffered < 2000001){
-                            return Math.floor(Math.round((inputVars.ctcOffered * 0.25)/12)/100)*100 ;
+                        if(ctcOffered < 2000001){
+                            return Math.floor(Math.round((ctcOffered * 0.25)/12)/100)*100 ;
                         }
-                        if(inputVars.ctcOffered >= 2000001){
-                            return Math.floor(Math.round((inputVars.ctcOffered * 0.2)/12)/100)*100 ;
+                        if(ctcOffered >= 2000001){
+                            return Math.floor(Math.round((ctcOffered * 0.2)/12)/100)*100 ;
                         }
                         else{
                             return 0;
