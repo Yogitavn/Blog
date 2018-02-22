@@ -68,7 +68,7 @@ angular.module('wowjsons')
                             "gmc_cover": 300000,
                             "gpa_cover": 1500000,
                             "pvb": "175000",
-                            "designations": "Project Lead,Technical Specialist,Sr. Consultant(Sr.Advisor)*,Dy. Manager"
+                            "designations": "Project Lead,Technologist,Sr. Consultant(Sr.Advisor)*,Dy. Manager"
                         },
                         "Band 2 Level C": {
                             "gmc_premium": 20000,
