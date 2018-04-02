@@ -766,7 +766,10 @@ angular.module('wowjsons')
                         - inputVars.customFieldsMap["pf_monthly"] - inputVars.customFieldsMap["gratuity_monthly"]);
                     }
                     
-            
+                    function fn_1028_get_string_two_month_gross (){
+                        return inWords(inputVars.customFieldsMap["two_month_gross"]);
+                     }
+                    
 
                 
             //-------------------------------------------
@@ -897,6 +900,8 @@ angular.module('wowjsons')
                         return fn_1028_get_shift_allowance_hardship_monthly();
                     case "fn_1028_get_shift_allownce_transport_monthly":
                         return fn_1028_get_shift_allownce_transport_monthly();
+                    case "fn_1028_get_string_two_month_gross":
+                        return fn_1028_get_string_two_month_gross();
                     
                 }
         }
