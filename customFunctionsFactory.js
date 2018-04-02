@@ -447,7 +447,7 @@ angular.module('wowjsons')
                             }
                         }
 
-                        return basic;
+                        return Math.round(basic);
                     }
 
                     function fn_1026_pf (){
