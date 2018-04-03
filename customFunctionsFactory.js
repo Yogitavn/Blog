@@ -498,8 +498,10 @@ angular.module('wowjsons')
                         {
                             return 100;
                         }
-                    return Math.round(((inputVars.ctcOffered - inputVars.currentCTC)/
-                    inputVars.currentCTC)*100);
+                        if(inputVars.currentCTC >= inputVars.ctcOffered){
+                            return 0;
+                        }
+                    return Math.round(((inputVars.ctcOffered - inputVars.currentCTC)/inputVars.currentCTC)*100);
                     }
 
                     function fn_1026_get_serial_no (){
